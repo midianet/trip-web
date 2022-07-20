@@ -8,3 +8,9 @@
 .content-home{
     height: calc(100vh - 60px)
 }
+
+.welcome-title{
+  color: #194d88;
+  
+  text-shadow: #e0e0e0 1px 1px 0;
+}

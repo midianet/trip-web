@@ -1,12 +1,12 @@
-import React from 'react';
-import { Routes, Route} from "react-router-dom";
-import { Nav, Alert } from './components';
-import { Home } from './home';
-import {FamilyList, FamilyForm } from './family';
-import {PassengerList, PassengerForm } from './passenger';
+import React from 'react'
+import { Routes, Route} from "react-router-dom"
+import { Nav, Alert } from './components'
+import { Home } from './home'
+import {FamilyList, FamilyForm } from './family'
+import {PassengerList, PassengerForm } from './passenger'
 import {PaymentList} from './payment';
 import {setDefaultLocale } from  "react-datepicker"
-import pt from 'date-fns/locale/pt';
+import pt from 'date-fns/locale/pt'
 
 import './App.css';
 
@@ -29,7 +29,7 @@ function App() {
           </Routes>
         </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

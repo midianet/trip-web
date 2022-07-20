@@ -19,7 +19,7 @@ export const AlertType = {
     Error: 'Error',
     Info: 'Info',
     Warning: 'Warning'
-};
+}
 
 // enable subscribing to alerts observable
 function onAlert(id = defaultId) {
