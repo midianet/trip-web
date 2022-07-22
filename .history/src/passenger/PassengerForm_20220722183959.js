@@ -136,17 +136,16 @@ function PassengerForm() {
                     </div>
                     <div className="row">
                         <div className="form-group col-3">
-                            <label>Status {watch('status')}</label>
+                            <label>Status</label>
                             <Controller control={control} name="status"
                             rules={{ required: true }}
+                            className={`form-control ${errors.status ? 'is-invalid' : ''}`}
                             render={({field}) => (
-                                <select {...field} 
-                                     value={statusList.find(e => e.value === field.value)} 
-                                     className={`form-select ${errors.name ? 'is-invalid' : ''}`} 
-                                     onChange={(e) => setValue('status', e.value)}>
-                                    <option selected>Selecione</option>                                        
-                                    {statusList.map((option) => (<option value={option.value}>{option.label}</option>))}
-                                </select>
+                                <Select {...field}
+                                    options={statusList}
+                                    value={statusList.find(e => e.value === field.value)}                                    
+                                    onChange={(e) => setValue('status', e.value)}
+                                />
                             )}/>
                             <div className="invalid-field">{errors.status?.message}</div>
                         </div>

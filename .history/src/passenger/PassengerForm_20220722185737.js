@@ -144,8 +144,8 @@ function PassengerForm() {
                                      value={statusList.find(e => e.value === field.value)} 
                                      className={`form-select ${errors.name ? 'is-invalid' : ''}`} 
                                      onChange={(e) => setValue('status', e.value)}>
-                                    <option selected>Selecione</option>                                        
                                     {statusList.map((option) => (<option value={option.value}>{option.label}</option>))}
+                                    <option selected>Open this select menu</option>
                                 </select>
                             )}/>
                             <div className="invalid-field">{errors.status?.message}</div>
